@@ -51,6 +51,10 @@ export const projects: ProjectNav[] = [
           { title: "렌더 최적화", path: "/docs/react/render-optimization" },
           { title: "Polymorphic 컴포넌트", path: "/docs/react/polymorphic" },
           { title: "Zod + react-hook-form", path: "/docs/react/form-validation" },
+          {
+            title: "React 19 Form vs RHF",
+            path: "/docs/react/react19-form-vs-rhf",
+          },
         ],
       },
     ],
@@ -74,6 +78,15 @@ export const projects: ProjectNav[] = [
           { title: "API Client 아키텍처", path: "/docs/nextjs/api-client" },
           { title: "인증 흐름 (Auth Flow)", path: "/docs/nextjs/auth-flow" },
           { title: "에러 처리 체계", path: "/docs/nextjs/error-system" },
+        ],
+      },
+      {
+        title: "풀스택",
+        items: [
+          { title: "Prisma + Next.js 설정", path: "/docs/nextjs/prisma-setup" },
+          { title: "Server Actions", path: "/docs/nextjs/server-actions" },
+          { title: "풀스택 CRUD 실전", path: "/docs/nextjs/fullstack-crud" },
+          { title: "SSG & SEO 최적화", path: "/docs/nextjs/ssg-seo" },
         ],
       },
     ],
@@ -199,6 +212,22 @@ export const projects: ProjectNav[] = [
           {
             title: "폼 공통 설계 (RHF + Zod)",
             path: "/docs/advanced/form-architecture",
+          },
+          {
+            title: "파일 업로드 & 다운로드",
+            path: "/docs/advanced/file-upload",
+          },
+          {
+            title: "디자인 → 코드 변환 루틴",
+            path: "/docs/advanced/design-to-code",
+          },
+          {
+            title: "하이브리드 앱 모바일 UI",
+            path: "/docs/advanced/mobile-ui-patterns",
+          },
+          {
+            title: "AWS 배포 & CI/CD",
+            path: "/docs/advanced/deploy-pipeline",
           },
         ],
       },
