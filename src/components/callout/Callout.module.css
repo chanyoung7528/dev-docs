@@ -1,0 +1,93 @@
+.callout {
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-left: 4px solid;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: white;
+}
+
+.content {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.content p {
+  margin: 0;
+}
+
+.content p + p {
+  margin-top: 8px;
+}
+
+/* Variants */
+.note {
+  background-color: var(--color-note-bg);
+  border-color: var(--color-note-border);
+}
+
+.note .icon {
+  background-color: var(--color-note-border);
+}
+
+.note .label {
+  color: var(--color-note-border);
+}
+
+.warning {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+}
+
+.warning .icon {
+  background-color: var(--color-warning-border);
+}
+
+.warning .label {
+  color: var(--color-warning-border);
+}
+
+.danger {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-border);
+}
+
+.danger .icon {
+  background-color: var(--color-danger-border);
+}
+
+.danger .label {
+  color: var(--color-danger-border);
+}
+
+.tip {
+  background-color: var(--color-tip-bg);
+  border-color: var(--color-tip-border);
+}
+
+.tip .icon {
+  background-color: var(--color-tip-border);
+}
+
+.tip .label {
+  color: var(--color-tip-border);
+}

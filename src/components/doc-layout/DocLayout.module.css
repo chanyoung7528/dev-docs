@@ -1,0 +1,140 @@
+.article {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+}
+
+.content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+  color: var(--color-text);
+}
+
+.content p {
+  margin: 12px 0;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.content ul,
+.content ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.content li {
+  margin: 6px 0;
+  line-height: 1.7;
+}
+
+.content strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.content hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.content th,
+.content td {
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.content th {
+  background-color: var(--color-bg-secondary);
+  font-weight: 700;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  gap: 16px;
+}
+
+.paginationLink {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.15s;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.paginationLink:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.paginationLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.paginationTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

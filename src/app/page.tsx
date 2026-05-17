@@ -1,66 +1,48 @@
-import Image from "next/image";
+import Link from "next/link";
+import { projects } from "@/config/navigation";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+    <main className={styles.main}>
+      <section className={styles.hero}>
+        <h1 className={styles.heroTitle}>프론트엔드 개발 가이드</h1>
+        <p className={styles.heroDescription}>
+          프로젝트에서 사용하는 핵심 기술들을 개념부터 실전까지 정리한 교육
+          문서입니다.
+        </p>
+        <Link
+          href={projects[0]?.categories[0]?.items[0]?.path ?? "#"}
+          className={styles.heroButton}
+        >
+          학습 시작하기
+        </Link>
+      </section>
+
+      <section className={styles.projects}>
+        {projects.map((project) => {
+          const totalItems = project.categories.reduce(
+            (acc, cat) => acc + cat.items.length,
+            0
+          );
+          const firstLink = project.categories[0]?.items[0]?.path ?? "#";
+
+          return (
+            <Link
+              key={project.slug}
+              href={firstLink}
+              className={styles.projectCard}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+              <h2 className={styles.projectTitle}>{project.title}</h2>
+              <p className={styles.projectDescription}>{project.description}</p>
+              <div className={styles.projectMeta}>
+                <span>{project.categories.length}개 섹션</span>
+                <span>{totalItems}개 문서</span>
+              </div>
+            </Link>
+          );
+        })}
+      </section>
+    </main>
   );
 }

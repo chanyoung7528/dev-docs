@@ -1,0 +1,123 @@
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-bg);
+  padding: 16px 0;
+  z-index: 10;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project {
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.projectToggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.projectToggle:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.projectTitle {
+  letter-spacing: 0.02em;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.open .chevron {
+  transform: rotate(90deg);
+}
+
+.projectContent {
+  padding-bottom: 8px;
+}
+
+.category {
+  padding: 4px 0;
+}
+
+.categoryTitle {
+  padding: 6px 20px 6px 28px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.itemList {
+  list-style: none;
+}
+
+.item {
+  display: block;
+  padding: 6px 20px 6px 36px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  border-left: 3px solid transparent;
+  transition: all 0.15s;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.item:hover {
+  color: var(--color-text);
+  background-color: var(--color-bg-hover);
+  text-decoration: none;
+}
+
+.item.active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  border-left-color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
