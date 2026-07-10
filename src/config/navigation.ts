@@ -234,6 +234,28 @@ export const projects: ProjectNav[] = [
     ],
   },
   {
+    title: "AWS 기초",
+    slug: "aws",
+    description: "비전공자도 이해하는 AWS 핵심 개념",
+    categories: [
+      {
+        title: "시작하기",
+        items: [
+          { title: "AWS란 무엇인가?", path: "/docs/aws/introduction" },
+          { title: "인프라 기초 개념", path: "/docs/aws/infrastructure" },
+        ],
+      },
+      {
+        title: "서비스 & 구성",
+        items: [
+          { title: "자주 쓰는 핵심 서비스", path: "/docs/aws/core-services" },
+          { title: "실전 구성도", path: "/docs/aws/architecture" },
+          { title: "용어 & 대화 팁", path: "/docs/aws/terms-and-tips" },
+        ],
+      },
+    ],
+  },
+  {
     title: "TypeScript",
     slug: "typescript",
     description: "TypeScript 실무 필수 패턴",
